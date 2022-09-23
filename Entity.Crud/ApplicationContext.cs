@@ -4,30 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Entity.Crud
 {
 
-    public class ApplicationContext : DbContext
+    
+
+    /*public class ApplicationContext : DbContext
     {
         public DbSet<User> Users { get; set; } = null!;
-        public string connectionString;
-        public ApplicationContext(string connectionString)
+        public ApplicationContext()
         {
-            this.connectionString = connectionString;   // получаем извне строку подключения
-            Database.EnsureCreated();
+            Database.EnsureDeleted();   // удаляем бд со старой схемой
+            Database.EnsureCreated();   // создаем бд с новой схемой
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(connectionString);
+            optionsBuilder.UseSqlite("Data Source=helloapp.db");
         }
-    }
-    public class User
-    {
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public int Age { get; set; }
-        public string Gender { get; set; }
-        public string Linn { get; set; }
-    }
+    }*/
+
 }
